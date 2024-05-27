@@ -1,0 +1,94 @@
+---
+layout: default
+---         
+
+      <main role="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="animated-title">
+                <div class="title-container">
+                  <h1 class="title">lab&nbsp;</h1>
+                  <h1 class="title-bio">work</h1>
+                  <h1 class="title-subtitle">a handful of projects I have enjoyed working on in the lab.</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-12">
+              <div class="pt-4 pb-2">
+              </div>
+          </div>
+          {% for project in site.projects_lab %}
+          <div class="card border-dark m-4 " style="width: 18rem;">
+              <div class="row m-1 " style="height: 250px;">
+                <div class="col-sm-12 my-auto" style="width: 300px; height: 200px; overflow: hidden;">
+                  <img class="card-img-top img-fluid" src="{{project.img}}" alt="Card image cap" style="width: 100%; object-fit: cover;">
+                </div>
+              </div>
+                      <hr>
+                      <div class="card-body">
+                          <h5 class="card-title">{{project.name}}</h5>
+                          <p class="card-text">{{project.intro}}</p>
+                          <a href="{{project.url}}" class="btn btn-dark">More info</a>
+                      </div>
+                      <div class="card-footer text-muted">
+                          {% for tag in project.tags %}
+                              <span class="badge badge-pill badge-dark">{{tag}}</span>
+                          {%endfor%}
+                      </div>
+                  </div>
+              {% endfor %}
+          </div>
+      </div>
+      <hr>
+
+    
+      </div> <!-- /container -->
+    
+  
+  </div>
+</div>
+</div>
+  </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  
+    <script>
+      $(document).ready(function() {
+        // get the title element
+        var $title = $('.title');
+        
+        // add a class to trigger the animation
+        $title.addClass('animate');
+        
+        // remove the class when the animation ends to prevent it from repeating
+        $title.on('animationend', function() {
+          $title.removeClass('animate');
+        });
+      });
+      </script>
+
+  
+  
+  
+  </body>
+
+
+
+
+
+
+
+</html>

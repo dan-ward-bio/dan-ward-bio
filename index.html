@@ -1,0 +1,89 @@
+---
+layout: default
+---    
+
+    <main role="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="animated-title">
+              <div class="title-container">
+                <h1 class="title">dan</h1>
+                <h1 class="title">ward</h1>
+                <h1 class="title-bio">bio</h1>
+                <h1 class="title-subtitle">an e-portfolio describing some of the exciting projects I work on professionally and at home.</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+
+        <!-- Example row of columns -->
+        <div class="row my-4">
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <div class="hover_img_1">
+                  <a href="lab.html">
+                    
+                    <h2>With a pipette</h2>
+                    <p>With 10 years' experience working and teaching in the wet-lab, I have worked as a post-doc developing and applying techniques in immunology, protein biology, molecular biology and genomics. I'm as confident purifying proteins as I am loading a MinION and teach.</p>
+                    <span><img src="img/pipette_icon.svg" alt="With a pipette" height="70"></span>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <div class="hover_img_3">
+                  <a href="informatics.html">
+                    <h2>With a keyboard</h2>
+                    <p>A 'full-stack scientist', I apply my bash, python, webdev and sysadmin skills, daily, at front and back-end to enable cutting-edge research in pathogen genomics. These skills drive bespoke tool-development, omic-data analysis and higher-education teaching. </p>
+                    <span><img src="img/informatics.svg" alt="With a keyboard" height="70"></span>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <div class="hover_img_2">
+                  <a href="making.html">
+                    
+                    <h2>With a screwdriver</h2>
+                    <p>I'm a prolific tinkerer, spending the last 20 years teaching myself how to disassemble interesting devices, only in the latter 15 years having the ability to put them back together. I am an experienced IT hardware engineer and a novice electrical engineer/maker.</p>
+                    <span><img src="img/screwdriver_et_al.svg" alt="With a screwdriver" height="70"></span>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        // get the title element
+        var $title = $('.title');
+        
+        // add a class to trigger the animation
+        $title.addClass('animate');
+        
+        // remove the class when the animation ends to prevent it from repeating
+        $title.on('animationend', function() {
+          $title.removeClass('animate');
+        });
+      });
+    </script>
+  </body>
+</html>
